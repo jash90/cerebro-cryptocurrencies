@@ -1,4 +1,4 @@
-import { url, CURRENCIES, CRYPTOCURRENCIES } from "./const";
+import { URL, CURRENCIES, CRYPTOCURRENCIES, API } from "./const";
 import icon from "./icon.png";
 export const fn = ({ term, display}) => {
   const regex = /([0-9]+) (\w+) (?:to|in|at) (\w+)/;
@@ -25,7 +25,7 @@ export const fn = ({ term, display}) => {
       CRYPTOCURRENCIES.includes(cryptocurrency)
     ) {
       try {
-        fetch(`${url}${cryptocurrency}&tsyms=${currency}`)
+        fetch(`${URL}${cryptocurrency}&tsyms=${currency}&api_key=${API}`)
           .then(resp => resp.json())
           .then(response => {
             const price = Number(response[`${currency}`]);

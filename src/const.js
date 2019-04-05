@@ -1,5 +1,7 @@
 
-export const url = "https://min-api.cryptocompare.com/data/price?fsym=";
+export const URL = "https://min-api.cryptocompare.com/data/price?fsym=";
+
+export const API = "3c484fc372fe6e87bab8d78cd8591f442d129aece5c846f8ca249c884ab05d0d";
 
 export const CURRENCIES = [
     'AUD', 'BGN', 'BRL', 'CAD', 'CHF', 'CNY',
@@ -9,7 +11,6 @@ export const CURRENCIES = [
     'RON', 'RUB', 'SEK', 'SGD', 'THB', 'TRY',
     'UAH', 'USD', 'ZAR', 'CLP'
   ]
-  
 
  export const CRYPTOCURRENCIES = [
     "42",
