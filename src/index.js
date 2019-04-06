@@ -1,7 +1,7 @@
 import { URL, CURRENCIES, CRYPTOCURRENCIES, API } from "./const";
 import icon from "./icon.png";
 export const fn = ({ term, display }) => {
-  const regex = /([0-9]+) (\w+) (?:to|in|at) (\w+)/;
+  const regex = /([0-9]+)\s?(\w+)\s?(?:to|in|at)\s?(\w+)/;
   const match = term.toLowerCase().match(regex);
   if (match) {
     let count = Number(match[1]);
