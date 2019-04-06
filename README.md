@@ -1,6 +1,6 @@
 # cerebro-cryptocurrencies
 
-> [Cerebro](http://www.cerebroapp.com) plugin for convert cryptocurrencies
+> [Cerebro](http://www.cerebroapp.com)  plugin for converting cryptocurrencies and currencies
 
 ![](screenshot.png)
 
@@ -9,9 +9,9 @@
 Just enter what you want!
 
 ## Features
-* Supports cryptocurrencies;
-* Understands currency codes;
-* Supports English `500 eth in pln`
+* Supports cryptocurrencies and currencies;
+* Understands currency and crytocurrencies codes;
+* Supports English `500 eth in pln` , `500 pln in eth` , `500 eth in btc` , `500 usd to eur`
 
 ## Related
 

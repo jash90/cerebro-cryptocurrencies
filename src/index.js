@@ -1,52 +1,34 @@
 import { URL, CURRENCIES, CRYPTOCURRENCIES, API } from "./const";
 import icon from "./icon.png";
-export const fn = ({ term, display}) => {
+export const fn = ({ term, display }) => {
   const regex = /([0-9]+) (\w+) (?:to|in|at) (\w+)/;
   const match = term.toLowerCase().match(regex);
   if (match) {
     let count = Number(match[1]);
     let firstCurrency = String(match[2]).toUpperCase();
     let secondCurrency = String(match[3]).toUpperCase();
-    let cryptocurrency = firstCurrency;
-    let currency = secondCurrency;
-    let divide = false;
 
     if (
-      CURRENCIES.includes(firstCurrency) &&
-      CRYPTOCURRENCIES.includes(secondCurrency)
-    ) {
-      currency = firstCurrency;
-      cryptocurrency = secondCurrency;
-      divide = true;
-    }
-
-    if (
-      CURRENCIES.includes(currency) &&
-      CRYPTOCURRENCIES.includes(cryptocurrency)
+      (CURRENCIES.includes(firstCurrency) ||
+        CRYPTOCURRENCIES.includes(firstCurrency)) &&
+      (CURRENCIES.includes(secondCurrency) ||
+        CRYPTOCURRENCIES.includes(secondCurrency))
     ) {
       try {
-        fetch(`${URL}${cryptocurrency}&tsyms=${currency}&api_key=${API}`)
+        fetch(`${URL}${firstCurrency}&tsyms=${secondCurrency}&api_key=${API}`)
           .then(resp => resp.json())
           .then(response => {
-            const price = Number(response[`${currency}`]);
-            const value = this.calculate(divide, count, price);
+            const price = Number(response[`${secondCurrency}`]);
+            const value = (count * price).toFixed(2);
             display({
               title: `${count} ${firstCurrency} = ${value} ${secondCurrency}`,
-              term: `${term} = ${value} ${currency}`,
+              term: `${term}`,
               icon: icon
             });
           });
       } catch (err) {
-        // do nothing when amount parse failed
         return;
       }
     }
-  }
-};
-export const calculate = (divide, a, b) => {
-  if (divide) {
-    return (a / b).toFixed(2);
-  } else {
-    return (a * b).toFixed(2);
   }
 };
