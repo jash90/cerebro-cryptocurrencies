@@ -13,7 +13,7 @@ Example:
 
 ## Features
 
-* Supports **3870** [cryptocurrencies](list-cryptocurrencies.json) and **41** [currencies](list-currencies.json)
+* Supports **3870** [cryptocurrencies](https://raw.githubusercontent.com/jash90/cerebro-cryptocurrencies/master/list-cryptocurrencies.json) and **41** [currencies](https://github.com/jash90/cerebro-cryptocurrencies/blob/master/list-currencies.json)
 * Support cryptocompare.com
 
 ## License
