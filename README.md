@@ -1,22 +1,20 @@
 # cerebro-cryptocurrencies
 
-> [Cerebro](http://www.cerebroapp.com)  plugin for converting cryptocurrencies and currencies
-
+**[Cerebro](http://www.cerebroapp.com)** plugin for converting currencies and cryptocurrencies
 ![](screenshot.png)
 
 ## Usage
 
-Just enter what you want!
+Enter the **amount**, **currency code / cryptocurrency**, preposition **(to, in, at)** and **currency code / cryptocurrency**  
+Example:  
+**100 ETH in USD**  
+**50 BTC at ETH**  
+**0.5 USD to EUR**  
 
 ## Features
-* Supports cryptocurrencies and currencies;
-* Understands currency and crytocurrencies codes;
-* Supports English `500 eth in pln` , `500 pln in eth` , `500 eth in btc` , `500 usd to eur`
 
-## Related
-
-- [Cerebro](http://github.com/KELiON/cerebro) – main repo for Cerebro app;
-- [cerebro-plugin](http://github.com/KELiON/cerebro-plugin) – boilerplate to create Cerebro plugins;
+* Supports **3870** [cryptocurrencies](list-cryptocurrencies.json) and **41** [currencies](list-currencies.json)
+* Support cryptocompare.com
 
 ## License
 

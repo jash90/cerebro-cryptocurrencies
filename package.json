@@ -1,6 +1,6 @@
 {
   "name": "cerebro-cryptocurrencies",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "Cerebro plugin for converting cryptocurrencies and currencies",
   "license": "MIT",
   "repository": "jash90/cerebro-cryptocurrencies",
@@ -21,7 +21,9 @@
     "cerebro",
     "cerebro-plugin",
     "cryptocurrency",
-    "converter"
+    "converter",
+    "currency",
+    "bitcoin"
   ],
   "scripts": {
     "start": "cerebro-scripts start",
