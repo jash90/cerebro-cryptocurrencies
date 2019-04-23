@@ -13,7 +13,7 @@ Example:
 
 ## Features
 
-* Supports **3870** cryptocurrencies and **41** currencies
+* Supports **3870** [cryptocurrencies](list-cryptocurrencies.json) and **41** [currencies](list-currencies.json)
 * Support cryptocompare.com
 
 ## License
