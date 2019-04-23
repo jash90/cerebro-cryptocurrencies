@@ -9,10 +9,11 @@ Enter the **amount**, **currency code / cryptocurrency**, preposition **(to, in,
 Example:  
 **100 ETH in USD**  
 **50 BTC at ETH**  
-**0.5 USD to EUR**   
+**0.5 USD to EUR**  
 
 ## Features
-* Supports **3870** cryptocurrencies** and **41** currencies
+
+* Supports **3870** cryptocurrencies and **41** currencies
 * Support cryptocompare.com
 
 ## License
