@@ -1,4 +1,10 @@
-import { URL, CURRENCIES, CRYPTOCURRENCIES, API } from "./const";
+import {
+  URL,
+  CURRENCIES,
+  CRYPTOCURRENCIES,
+  API,
+  DEFAULT_CURRENCIES
+} from "./const";
 import icon from "./icon.png";
 export const fn = ({ term, display }) => {
   const regex = /([0-9]+)\s?(\w+)\s?(?:to|in|at)\s?(\w+)/;
@@ -15,7 +21,10 @@ export const fn = ({ term, display }) => {
         CRYPTOCURRENCIES.includes(secondCurrency))
     ) {
       try {
-        fetch(`${URL}${firstCurrency}&tsyms=${secondCurrency}&api_key=${API}`)
+        fetch(
+          `${URL}${firstCurrency}&tsyms=${secondCurrency +
+            DEFAULT_CURRENCIES}&api_key=${API}`
+        )
           .then(resp => resp.json())
           .then(response => {
             const price = Number(response[`${secondCurrency}`]);
@@ -23,7 +32,14 @@ export const fn = ({ term, display }) => {
             display({
               title: `${count} ${firstCurrency} = ${value} ${secondCurrency}`,
               term: `${term}`,
-              icon: icon
+              icon: icon,
+              getPreview: () => (
+                <Preview
+                  term={`${count} ${firstCurrency}`}
+                  previewText={response}
+                  thumbnail={icon}
+                />
+              )
             });
           });
       } catch (err) {

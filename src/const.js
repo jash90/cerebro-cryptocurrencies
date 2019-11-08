@@ -1,6 +1,8 @@
 
 export const URL = "https://min-api.cryptocompare.com/data/price?fsym=";
 
+export const DEFAULT_CURRENCIES = ",USD,EUR,GBP,PLN";
+
 export const API = "3c484fc372fe6e87bab8d78cd8591f442d129aece5c846f8ca249c884ab05d0d";
 
 export const CURRENCIES = [
