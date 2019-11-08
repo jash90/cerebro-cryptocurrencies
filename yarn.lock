@@ -1110,14 +1110,14 @@ cerebro-scripts@0.0.25:
     url-loader "^0.5.7"
     webpack "2.5.1"
 
-cerebro-tools@0.1.8:
+cerebro-tools@^0.1.8:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/cerebro-tools/-/cerebro-tools-0.1.8.tgz#876e5eff7ab036fdbcee283bdfa2939e989d6314"
   integrity sha1-h25e/3qwNv287ig736KTnpidYxQ=
   dependencies:
     memoizee "^0.4.1"
 
-cerebro-ui@0.0.16:
+cerebro-ui@^0.0.16:
   version "0.0.16"
   resolved "https://registry.yarnpkg.com/cerebro-ui/-/cerebro-ui-0.0.16.tgz#55695c26862ebd9a9e44646feb0b475c208d010e"
   integrity sha1-VWlcJoYuvZqeRGRv6wtHXCCNAQ4=
@@ -4292,7 +4292,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.5.8:
+prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -4462,6 +4462,15 @@ react@^15.4.2:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
     prop-types "^15.5.10"
+
+react@^16.11.0:
+  version "16.11.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.11.0.tgz#d294545fe62299ccee83363599bf904e4a07fdbb"
+  integrity sha512-M5Y8yITaLmU0ynd0r1Yvfq98Rmll6q8AxaEe88c8e7LxO8fZ2cNgmFt0aGAS9wzf1Ao32NKXtCl+/tVVtkxq6g==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.2"
 
 read-pkg-up@^1.0.1:
   version "1.0.1"
