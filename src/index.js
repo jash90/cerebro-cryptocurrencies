@@ -35,8 +35,8 @@ export const fn = ({ term, display }) => {
               icon: icon,
               getPreview: () => (
                 <Preview
-                  term={`${count} ${firstCurrency}`}
-                  previewText={response}
+                  currency={`${count} ${firstCurrency}`}
+                  currencies={response}
                   thumbnail={icon}
                 />
               )

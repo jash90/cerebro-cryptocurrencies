@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "cerebro-tools": "^0.1.8",
-    "cerebro-ui": "^0.0.16"
+    "cerebro-ui": "^0.0.16",
+    "react": "^16.11.0"
   },
   "devDependencies": {
     "cerebro-scripts": "0.0.25"
