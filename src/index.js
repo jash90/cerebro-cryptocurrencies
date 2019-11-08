@@ -5,6 +5,7 @@ import {
   API,
   DEFAULT_CURRENCIES
 } from "./const";
+import Preview from "./Preview";
 import icon from "./icon.png";
 export const fn = ({ term, display }) => {
   const regex = /([0-9]+)\s?(\w+)\s?(?:to|in|at)\s?(\w+)/;
