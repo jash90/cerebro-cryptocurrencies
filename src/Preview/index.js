@@ -1,4 +1,3 @@
-import React from "react"
 import styles from "./styles.css"
 
 module.exports = ({currency, currencies, thumbnail}) => (
