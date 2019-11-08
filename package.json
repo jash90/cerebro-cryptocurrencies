@@ -38,10 +38,9 @@
     "bitcoin"
   ],
   "scripts": {
-    "start": "cerebro-scripts start",
     "build": "webpack && babili dist -d dist --compact --no-comments",
-    "test": "cerebro-scripts test",
-    "clear": "cerebro-scripts clear",
+    "debug": "./scripts/debug",
+    "debug:windows": "scripts\\debug.bat",
     "prepublish": "rimraf ./dist && npm run build"
   }
 }
