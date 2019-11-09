@@ -1,5 +1,4 @@
 import styles from "./styles.css";
-import React from "react";
 
 module.exports = ({ count, currency, currencies, thumbnail }) => (
   <div className={styles.main}>
