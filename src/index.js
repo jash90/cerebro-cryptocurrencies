@@ -7,7 +7,7 @@ import {
 } from "./const";
 import Preview from "./Preview";
 import icon from "./icon.png";
-const plugin = ({ term, display, settings }) => {
+export const fn = ({ term, display }) => {
   const regex = /([0-9]+)\s?(\w+)\s?(?:to|in|at)\s?(\w+)/;
   const match = term.toLowerCase().match(regex);
   if (match) {
@@ -16,8 +16,8 @@ const plugin = ({ term, display, settings }) => {
     let secondCurrency = String(match[3]).toUpperCase();
 
     if (
-      CURRENCIES.includes(firstCurrency) ||
-      CRYPTOCURRENCIES.includes(firstCurrency)
+      (CURRENCIES.includes(firstCurrency) ||
+        CRYPTOCURRENCIES.includes(firstCurrency))
     ) {
       try {
 
@@ -25,7 +25,7 @@ const plugin = ({ term, display, settings }) => {
           !CURRENCIES.includes(secondCurrency) &&
           !CRYPTOCURRENCIES.includes(secondCurrency)
         ) {
-          secondCurrency = settings.currency;
+          secondCurrency = "USD"
         }
 
         fetch(
@@ -55,12 +55,5 @@ const plugin = ({ term, display, settings }) => {
         return;
       }
     }
-  }
-};
-
-module.exports = {
-  fn: plugin,
-  settings: {
-    currency: CURRENCIES.concat(CRYPTOCURRENCIES)
   }
 };
