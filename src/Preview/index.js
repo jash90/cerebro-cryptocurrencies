@@ -10,7 +10,8 @@ module.exports = ({ count, currency, currencies, thumbnail }) => (
     {Object.keys(currencies).map(key => {
       return (
         <div>
-          <h3>{`${key}: ${currencies[`${key}`] * count} ${key}`}</h3>
+          <h3>{`${key}: ${Math.round(currencies[`${key}`] * count * 100) /
+            100} ${key}`}</h3>
         </div>
       );
     })}
