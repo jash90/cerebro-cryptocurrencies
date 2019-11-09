@@ -17,17 +17,11 @@ export const fn = ({ term, display }) => {
 
     if (
       (CURRENCIES.includes(firstCurrency) ||
-        CRYPTOCURRENCIES.includes(firstCurrency))
+        CRYPTOCURRENCIES.includes(firstCurrency)) &&
+      (CURRENCIES.includes(secondCurrency) ||
+        CRYPTOCURRENCIES.includes(secondCurrency))
     ) {
       try {
-
-        if (
-          !CURRENCIES.includes(secondCurrency) &&
-          !CRYPTOCURRENCIES.includes(secondCurrency)
-        ) {
-          secondCurrency = "USD"
-        }
-
         fetch(
           `${URL}${firstCurrency}&tsyms=${secondCurrency +
             DEFAULT_CURRENCIES}&api_key=${API}`
@@ -40,7 +34,6 @@ export const fn = ({ term, display }) => {
               title: `${count} ${firstCurrency} = ${value} ${secondCurrency}`,
               term: `${term}`,
               icon: icon,
-              clipboard: `${count} ${firstCurrency} = ${value} ${secondCurrency}`,
               getPreview: () => (
                 <Preview
                   count={count}
